@@ -1,7 +1,7 @@
   import { useState } from "react";
   
   
-  function Titulo({ cor }) {
+  export default function Titulos({ cor }) {
     const [texto, setTexto] = useState("Texto Inicial")
     const [inputText, setInputText] = useState("")
 
@@ -21,5 +21,4 @@
     );
   }
   
-  export default Titulo;
   

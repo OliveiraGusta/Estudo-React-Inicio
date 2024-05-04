@@ -1,14 +1,19 @@
-import Titulo from "./Titulos";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home"
+import Contato from "./pages/Contato"
+import TitulosPage from "./pages/TitulosPage"
 
-function App() {
+export default function App() {
   return (
     <div>
-      <Titulo cor="green" />
-      <Titulo cor="blue" />
-      <Titulo cor="red" />
-      <Titulo cor="purple)" />
+      <BrowserRouter >
+          <Routes>
+            <Route path="/" element={<Home />}/>
+            <Route path="/contato" element={<Contato />}/>
+            <Route path="/titulos" element={<TitulosPage />}/>
+          </Routes>
+      </BrowserRouter>
     </div>
   );
 }
 
-export default App;
